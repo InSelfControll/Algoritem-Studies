@@ -1,0 +1,24 @@
+
+public class Liri {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean b=true;
+		int a=10;
+		double d=20.0000009;
+		long l=20;
+		char x='x';
+		String s="Hey hey hey";
+		float f=20.2f;
+		
+		System.out.println(b);
+		System.out.println(l);
+		System.out.println(d);
+		System.out.println(a);
+		System.out.println(s);
+		System.out.println(f);
+		System.out.println(c);
+		System.out.println(x);
+	}
+
+}
