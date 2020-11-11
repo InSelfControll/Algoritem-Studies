@@ -45,4 +45,24 @@ public class Elsa {
     System.out.println(f);
     System.out.println(x);*/
   }
+
+  public static class Builder {
+
+    public Elsa create() {}
+  }
+
+  public static class Builder {
+
+    public Elsa create() {}
+  }
+
+  public static class Builder {
+
+    public Elsa create() {}
+  }
+
+  public static class Builder {
+
+    public Elsa create() {}
+  }
 }
