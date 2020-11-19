@@ -1,2 +1,0 @@
-INDEX VERSION 1.131+/root/Desktop/Algoritem-Studies/.metadata/.plugins/org.eclipse.jdt.core
-2937798032.index
