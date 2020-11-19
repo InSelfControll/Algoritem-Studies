@@ -1,7 +1,7 @@
 
 public class homework {
 	public static void main(String[] args) {
-		// Variables
+		/* Variables */
 			int a = 5;
 			int b = 6;
 			int c = 7;
