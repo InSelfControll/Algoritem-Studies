@@ -1,7 +1,6 @@
 import java.util.Random;
 
 public class loops {
-
 	
 	public static void main (String[] args) {
 		int glass;
