@@ -1,8 +1,12 @@
 import java.util.Random;
 
+
 public class loops {
 	
 	public static void main (String[] args) {
+		
+		m.main(args);
+		
 		int glass;
 		int i = 20;
 		int [] doom = new int[20];
