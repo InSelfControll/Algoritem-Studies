@@ -20,7 +20,7 @@ public class robots {
 		// End Right numbers
 		
 		int rsum = a + x +f;
-		return rsum;
+		return Math.max(rsum, rsum);
 	}
 	
 	@SuppressWarnings("resource")
@@ -41,10 +41,18 @@ public class robots {
 		
 		int lsum = lsum();
 		int rsum = rsum();
-		if (lsum >= rsum) {
-			System.out.println("lSum is bigger than rsum: " + lsum );
+		if (lsum > rsum) {
+			System.out.println("lSum is bigger than rsum: " + lsum);
+		} else if (rsum > lsum || rsum == lsum) {
+			if (rsum > lsum) {
+				System.out.println("rSum is bigger than lsum: " + rsum);
+			}else {
+				System.out.println("rSum is equals to lsum: " + "rSum is: " + rsum + 
+						" lSum is : "  + lsum);
+			}
+			
 		} else {
-			System.out.println("rSum is bigger than sum: " + rsum);
+			
 		}
 		
 	}
