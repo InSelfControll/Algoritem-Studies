@@ -70,10 +70,9 @@ public class robots {
 		int rsum = rsum();
 		if (lsum > rsum) {
 			System.out.println("lSum is bigger than rsum: " + lsum);
-		}
-		if (lsum == rsum) {
+		} else if (lsum == rsum) {
 			System.out.println("lSum is equal to rsum: " + lsum + '\t' + rsum);
-		}else {
+		} else {
 			System.out.println("rSum is bigger than sum: " + rsum);
 		}
 		System.out.println('\n');
@@ -81,9 +80,9 @@ public class robots {
 		int rmax = rmax();
 		int lmax = lmax();
 		if (rmax > lmax) {
-			System.out.println("rightMax is bigger than lMax: " + rmax);
+			System.out.println("rightMax is bigger than leftMax: " + rmax);
 		} else {
-			System.out.println("leftMax is bigger than rMax: " + lmax);
+			System.out.println("leftMax is bigger than rightMax: " + lmax);
 		}
 	}
 }
