@@ -17,7 +17,7 @@ public class robots {
 		// End Right numbers
 
 		int rsum = a + x + f;
-		return Math.max(rsum, rsum);
+		return rsum;
 	}
 
 	@SuppressWarnings("resource")
@@ -31,7 +31,7 @@ public class robots {
 		// End Left numbers
 		int lsum = g + h + j;
 		System.out.println("Please put the numbers in the left cells! ");
-		return Math.max(lsum,j);
+		return lsum;
 	}
 
 	@SuppressWarnings("resource")
@@ -47,7 +47,8 @@ public class robots {
 		System.out.println("Please put the numbers in the left cells! ");
 		return lemax;
 	}
-	
+
+	@SuppressWarnings("resource")
 	public static int rmax() {
 		Scanner scan = new Scanner(System.in);
 
@@ -57,27 +58,32 @@ public class robots {
 		int j = scan.nextInt();
 		// End Left numbers
 		int remax = Math.max(g, Math.max(h, j));
-		System.out.println("Please put the numbers in the left cells! ");
+		System.out.println("Please put the numbers in the right cells! ");
+		/* return remax; */
 		return remax;
 	}
-	
+
 	public static void a1() {
 
+		System.out.println(" First step - rSum & lSum: ");
 		int lsum = lsum();
 		int rsum = rsum();
 		if (lsum > rsum) {
-			if (rmax() > lmax()){
-				System.out.println("rMax is bigger than lMax: " + rmax());
-			}else {
-				System.out.println("lMax is bigger than rMax: " + lmax());
-			}
-			System.out.println("lSum is bigger than rsum: " + rmax());
-		} else if (rsum > lsum || rsum == lsum) {
-			if (rsum > lsum) {
-				System.out.println("rSum is bigger than lsum: " + + lmax());
-			} else {
-				System.out.println("rSum is equals to lsum: " + "rSum is: " + rsum + " lSum is : " + lsum);
-			}
+			System.out.println("lSum is bigger than rsum: " + lsum);
+		}
+		if (lsum == rsum) {
+			System.out.println("lSum is equal to rsum: " + lsum + '\t' + rsum);
+		}else {
+			System.out.println("rSum is bigger than sum: " + rsum);
+		}
+		System.out.println('\n');
+		System.out.println("Second step - rMax & lMax: ");
+		int rmax = rmax();
+		int lmax = lmax();
+		if (rmax > lmax) {
+			System.out.println("rightMax is bigger than lMax: " + rmax);
+		} else {
+			System.out.println("leftMax is bigger than rMax: " + lmax);
 		}
 	}
 }
