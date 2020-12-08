@@ -24,13 +24,15 @@ public class robots {
 	public static int lsum() {
 		Scanner scan = new Scanner(System.in);
 
+		System.out.println("Please put the numbers in the left cells! ");
+		
 		// Start Left numbers
 		int g = scan.nextInt();
 		int h = scan.nextInt();
 		int j = scan.nextInt();
 		// End Left numbers
 		int lsum = g + h + j;
-		System.out.println("Please put the numbers in the left cells! ");
+		
 		return lsum;
 	}
 
@@ -38,13 +40,15 @@ public class robots {
 	public static int lmax() {
 		Scanner scan = new Scanner(System.in);
 
+		System.out.println("Please put the numbers in the left cells! ");
+		
 		// Start Left numbers
 		int g = scan.nextInt();
 		int h = scan.nextInt();
 		int j = scan.nextInt();
 		// End Left numbers
 		int lemax = Math.max(g, Math.max(h, j));
-		System.out.println("Please put the numbers in the left cells! ");
+		
 		return lemax;
 	}
 
@@ -56,9 +60,10 @@ public class robots {
 		int g = scan.nextInt();
 		int h = scan.nextInt();
 		int j = scan.nextInt();
+		System.out.println("Please put the numbers in the right cells! ");
 		// End Left numbers
 		int remax = Math.max(g, Math.max(h, j));
-		System.out.println("Please put the numbers in the right cells! ");
+		
 		/* return remax; */
 		return remax;
 	}
