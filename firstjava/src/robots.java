@@ -11,7 +11,7 @@ public class robots {
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Please put the numbers in the right cells! ");
-		
+
 		// Right numbers
 		int a = scan.nextInt();
 		int x = scan.nextInt();
@@ -59,12 +59,12 @@ public class robots {
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Please put the numbers in the right cells! ");
-		
+
 		// Start Left numbers
 		int g = scan.nextInt();
 		int h = scan.nextInt();
 		int j = scan.nextInt();
-		
+
 		// End Left numbers
 		int remax = Math.max(g, Math.max(h, j));
 
@@ -94,4 +94,36 @@ public class robots {
 			System.out.println("leftMax is bigger than rightMax: " + lmax);
 		}
 	}
+
+	public static String CONVERT(int x, int y, int z) {
+		char c1 = '0';
+		char c2 = '0';
+		char c3 = '0';
+		if (x == 1)
+			c1 = 'a';
+		if (x == 2)
+			c1 = 'b';
+		if (x == 3)
+			c1 = 'c';
+		if (x != 1 && x != 2 && x != 3)
+			c1 = 'z';
+		if (y == 1)
+			c2 = 'a';
+		if (y == 2)
+			c2 = 'b';
+		if (y == 3)
+			c2 = 'c';
+		if (y != 1 && y != 2 && y != 3)
+			c2 = 'z';
+		if (z == 1)
+			c3 = 'a';
+		if (z == 2)
+			c3 = 'b';
+		if (z == 3)
+			c3 = 'c';
+		if (z != 1 && z != 2 && z != 3)
+			c3 = 'z';
+		return (c1 + "" + c2 + "" + c3);
+	}
+
 }
