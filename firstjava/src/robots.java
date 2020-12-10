@@ -125,5 +125,4 @@ public class robots {
 			c3 = 'z';
 		return (c1 + "" + c2 + "" + c3);
 	}
-
 }
