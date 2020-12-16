@@ -124,5 +124,8 @@ public class robots {
 		if (z != 1 && z != 2 && z != 3)
 			c3 = 'z';
 		return (c1 + "" + c2 + "" + c3);
+		
+
+		
 	}
 }
