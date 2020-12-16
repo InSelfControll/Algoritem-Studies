@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class robots {
 
 	public static void main(String[] args) {
-		a1();
+		newfunc.home();
+		System.out.println("\n" + "To be continued: " + "\n");
+		MaxandSumCheck();
 	}
 
 	@SuppressWarnings("resource")
@@ -72,7 +74,7 @@ public class robots {
 		return remax;
 	}
 
-	public static void a1() {
+	public static void MaxandSumCheck() {
 
 		System.out.println(" First step - rSum & lSum: ");
 		int lsum = lsum();
@@ -93,39 +95,5 @@ public class robots {
 		} else {
 			System.out.println("leftMax is bigger than rightMax: " + lmax);
 		}
-	}
-
-	public static String CONVERT(int x, int y, int z) {
-		char c1 = '0';
-		char c2 = '0';
-		char c3 = '0';
-		if (x == 1)
-			c1 = 'a';
-		if (x == 2)
-			c1 = 'b';
-		if (x == 3)
-			c1 = 'c';
-		if (x != 1 && x != 2 && x != 3)
-			c1 = 'z';
-		if (y == 1)
-			c2 = 'a';
-		if (y == 2)
-			c2 = 'b';
-		if (y == 3)
-			c2 = 'c';
-		if (y != 1 && y != 2 && y != 3)
-			c2 = 'z';
-		if (z == 1)
-			c3 = 'a';
-		if (z == 2)
-			c3 = 'b';
-		if (z == 3)
-			c3 = 'c';
-		if (z != 1 && z != 2 && z != 3)
-			c3 = 'z';
-		return (c1 + "" + c2 + "" + c3);
-		
-
-		
 	}
 }

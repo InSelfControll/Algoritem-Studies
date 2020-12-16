@@ -30,7 +30,7 @@ public class m {
 		}
 		
 		System.out.println("\n Start of robot sum: ");
-		robots.a1();
+		robots.MaxandSumCheck();
 	}
 	
 }

@@ -5,8 +5,7 @@ public class firstattemptrobots {
 
 	
 	public static void main(String[] args) {
-		newfunc.home();
-		//a1();
+		a1();
 		
 	}
 
