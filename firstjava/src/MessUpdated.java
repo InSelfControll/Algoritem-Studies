@@ -11,19 +11,19 @@ public class MessUpdated {
 		Scanner userinput = new Scanner(System.in);
 		Random rnd = new Random();
 
-		int[] usernumber = new int[6];
-		int[] randomcounter = new int[6];
+		int[] usernumber = new int[7];
+		int[] randomcounter = new int[7];
 
-		int i;
-		int j;
+		int i = 7;
+		int j = 7;
 		int counters = 0;
 
 		for (i = 1; i <= 7; i++) {
 			usernumber[i] = userinput.nextInt();
 			randomcounter[i] = rnd.nextInt(37) + 1;
 			for (j = 1; j <= 7; j++) {
-				if (usernumber == randomcounter) {
-					System.out.println(usernumber[j] + "You correct! ");
+				if (usernumber[i] == randomcounter[j]) {
+					System.out.println(usernumber[i] + "You correct! ");
 					counters++;
 				}
 			}
