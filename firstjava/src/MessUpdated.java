@@ -12,7 +12,7 @@ public class MessUpdated {
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
 
-		int i,j,l;
+		int i,j;
 		int counters = 0;
 
 		for (i = 0; i < 6; i++) {
@@ -26,9 +26,8 @@ public class MessUpdated {
 		}
 		System.out.println("You're correct in: " + counters);
 		System.out.println("\n");
-		for (l = 0; l < 6; l++) {
-			randomcounter[l] = rnd.nextInt(37) + 1;
-			System.out.println("Random numbers are: " + randomcounter[l]);
+		for (j = 0; j < 6; j++) {
+			System.out.println("Random numbers are: " + randomcounter[j]);
 		}
 	}
 }
