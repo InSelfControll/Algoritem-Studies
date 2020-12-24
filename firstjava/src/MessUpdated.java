@@ -7,27 +7,31 @@ public class MessUpdated {
 	public static void main(String[] args) {
 
 		// int UserSelection = us();
-		@SuppressWarnings("resource")
 		Scanner userinput = new Scanner(System.in);
 		Random rnd = new Random();
 
-		int[] usernumber = new int[7];
-		int[] randomcounter = new int[7];
+		int[] usernumber = new int[6];
+		int[] randomcounter = new int[6];
 
-		int i = 7;
-		int j = 7;
+		int i;
+		int j;
 		int counters = 0;
 
-		for (i = 1; i <= 7; i++) {
+		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
-			randomcounter[i] = rnd.nextInt(37) + 1;
-			for (j = 1; j <= 7; j++) {
+			for (j = 0; j < 6; j++) {
+				randomcounter[j] = rnd.nextInt(37) + 1;
 				if (usernumber[i] == randomcounter[j]) {
-					System.out.println(usernumber[i] + "You correct! ");
 					counters++;
 				}
 			}
 		}
 		System.out.println("You're correct in: " + counters);
+		for (i = 0; i < 6; i++) {
+			System.out.println(usernumber[i]);
+			for (j = 0; j < 6; j++) {
+				System.out.println(randomcounter[j]);
+			}
+		}
 	}
 }
