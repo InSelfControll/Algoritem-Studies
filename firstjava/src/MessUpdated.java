@@ -43,13 +43,15 @@ public class MessUpdated {
 			counters++;
 
 			System.out.println("You guessed  " + counters + " right!" + " \n");
+			System.out.println(counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " "
+					+ counter5 + "\n");
 			return;
 
 		} else {
 			System.out.println("You failed! ");
+			System.out.println(
+					counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5 + "\n");
 		}
-		System.out.println(
-				counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5 + "\n");
 
 	}
 }
