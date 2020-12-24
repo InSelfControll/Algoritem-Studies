@@ -28,6 +28,6 @@ public class MessUpdated {
 		for (l = 0; l < 6; l++) {
 			randomcounter[l] = rnd.nextInt(37) + 1;
 		}
-		System.out.println(" Random number are: " + (randomcounter));
+		System.out.println(" Random numbers are: " + randomcounter[l]);
 	}
 }
