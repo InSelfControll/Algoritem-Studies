@@ -23,14 +23,15 @@ public class MessUpdated {
 			randomcounter[i] = rnd.nextInt(37) + 1;
 			for (j = 1; j < 6; j++) {
 				if (usernumber == randomcounter) {
-					System.out.println(usernumber[i] + "You correct! ");
+					System.out.println(usernumber[j] + "You correct! ");
 					counters++;
 				} else {
-					System.out.println("You're failed! ");
+					
 				}
 			}
+			System.out.println("You're failed! ");
+			System.out.println(randomcounter[6]);
 		}
-		System.out.println(randomcounter[i]);
 		System.out.println("You're correct in: " + counters);
 	}
 }
