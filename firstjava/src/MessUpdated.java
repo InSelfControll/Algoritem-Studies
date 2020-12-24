@@ -1,5 +1,9 @@
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class MessUpdated {
 
@@ -35,55 +39,23 @@ public class MessUpdated {
 		System.out.println("Please enter your guesses! ");
 
 		// User Selection
-		int unumber = sc.nextInt();
-		int unumber1 = sc.nextInt();
-		int unumber2 = sc.nextInt();
-		int unumber3 = sc.nextInt();
-		int unumber4 = sc.nextInt();
-		int unumber5 = sc.nextInt();
+		int[] unumber = new int[7];
 
-		int counter = rnd.nextInt(4) + 1;
-		int counter1 = rnd.nextInt(37) + 1;
-		int counter2 = rnd.nextInt(37) + 1;
-		int counter3 = rnd.nextInt(37) + 1;
-		int counter4 = rnd.nextInt(37) + 1;
-		int counter5 = rnd.nextInt(37) + 1;
+		List<Integer> counter = IntStream.range(1, 38).boxed().collect(Collectors.toList());
 
-		int counters = 0;
-		if (unumber == counter || unumber1 == counter || unumber2 == counter || unumber3 == counter
-				|| unumber4 == counter || unumber5 == counter && unumber == counter1 || unumber1 == counter1
-				|| unumber2 == counter1 || unumber3 == counter1 || unumber4 == counter1
-				|| unumber5 == counter1 && unumber == counter2 || unumber1 == counter2 || unumber2 == counter2
-				|| unumber3 == counter2 || unumber4 == counter2 || unumber5 == counter2 && unumber == counter3
-				|| unumber1 == counter3 || unumber2 == counter3 || unumber3 == counter3 || unumber4 == counter3
-				|| unumber5 == counter3 && unumber == counter4 || unumber1 == counter4 || unumber2 == counter4
-				|| unumber3 == counter4 || unumber4 == counter4 || unumber5 == counter4 && unumber == counter5
-				|| unumber1 == counter5 || unumber2 == counter5 || unumber3 == counter5 || unumber4 == counter5
-				|| unumber5 == counter5) {
-			counters++;
+		Collections.shuffle(counter);
 
-			String msg = "You guessed the right number! " + counters + " \n";
-			System.out.println(msg);
+		// sc.nextInt();
+		/*
+		 * int unumber1 = sc.nextInt(); int unumber2 = sc.nextInt(); int unumber3 =
+		 * sc.nextInt(); int unumber4 = sc.nextInt(); int unumber5 = sc.nextInt();
+		 */
 
-		} else {
-			System.out.println("You failed! ");
+		int i = 0;
+		for (i = 0; i < 7; i++) {
+			unumber[i] = counter.get(i);
 		}
-
-		// if (counter1 == unumber || counter == unumber1 || counter == unumber2 ||
-		// counter == unumber3 || counter == unumber4 || counter == unumber5) {
-		System.out.println("\n");
-
-		System.out
-				.println(counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);
-		/*
-		 * System.out.println( unumber + " " + unumber1 + " " + unumber2 + " " +
-		 * unumber3 + " " + unumber4 + " " + unumber5 + "\n");
-		 */
-		/*
-		 * System.out.println(unumber1); System.out.println(unumber2);
-		 * System.out.println(unumber3); System.out.println(unumber4);
-		 * System.out.println(unumber5 + "\n");
-		 */
 		return 0;
+
 	}
 }
