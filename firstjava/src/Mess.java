@@ -11,33 +11,34 @@ public class Mess {
 		int counter = 0;
 		int i = 0;
 
-		for (i = 1; i < 7; i++) {
+		for (i = 1; i <= 7; i++) {
 			if (UserSelection == rnd) {
 				counter++;
-				System.out.println("You guessed the right number! " + counter);
 			} else {
 				System.out.println("Try next time! ");
 			}
 		}
+		System.out.println("You guessed the right number! " + counter);
 	}
 
 	public static int RandomNumbers() {
 
 		Random rnd = new Random();
 
-		int counter = rnd.nextInt(4) + 1;
+		int counter = rnd.nextInt(37) + 1;
 		int counter1 = rnd.nextInt(37) + 1;
 		int counter2 = rnd.nextInt(37) + 1;
 		int counter3 = rnd.nextInt(37) + 1;
 		int counter4 = rnd.nextInt(37) + 1;
 		int counter5 = rnd.nextInt(37) + 1;
 
-		System.out.println(counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);
-		/*System.out.println(counter1);
-		System.out.println(counter2);
-		System.out.println(counter3);
-		System.out.println(counter4);
-		System.out.println(counter5);*/
+		System.out.println(
+				counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5 + "\n");
+		/*
+		 * System.out.println(counter1); System.out.println(counter2);
+		 * System.out.println(counter3); System.out.println(counter4);
+		 * System.out.println(counter5);
+		 */
 
 		/*
 		 * if (counter == counter1) { return counter1; } else if (counter == counter2) {
@@ -92,7 +93,8 @@ public class Mess {
 		int unumber5 = sc.nextInt();
 
 		System.out.println("\n");
-		System.out.println(unumber + " " + unumber1 + " " + unumber2 + " " + unumber3 + " " + unumber4 + " " + unumber5 + "\n") ;
+		System.out.println(
+				unumber + " " + unumber1 + " " + unumber2 + " " + unumber3 + " " + unumber4 + " " + unumber5 + "");
 		System.out.println(unumber1);
 		System.out.println(unumber2);
 		System.out.println(unumber3);
