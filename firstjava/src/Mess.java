@@ -9,8 +9,9 @@ public class Mess {
 		int UserSelection = us();
 		int rnd = RandomNumbers();
 		int counter = 0;
+		int i = 0;
 
-		for (counter = 0; counter < 6; counter++) {
+		for (i = 1; i < 7; i++) {
 			if (UserSelection == rnd) {
 				counter++;
 				System.out.println("You guessed the right number! " + counter);
@@ -23,8 +24,6 @@ public class Mess {
 	public static int RandomNumbers() {
 
 		Random rnd = new Random();
-
-		int i = 0;
 
 		int counter = rnd.nextInt(4) + 1;
 		int counter1 = rnd.nextInt(37) + 1;
@@ -40,7 +39,6 @@ public class Mess {
 		System.out.println(counter4);
 		System.out.println(counter5);
 
-		
 		/*
 		 * if (counter == counter1) { return counter1; } else if (counter == counter2) {
 		 * return counter2; } else if (counter == counter3) { return counter3; } else if
@@ -62,8 +60,6 @@ public class Mess {
 		 * if (counter3 == counter4) { return counter4; } else if (counter3 == counter5)
 		 * { return counter5; }
 		 */
-		
-		
 
 		// if (i < 6 ){
 		// if (UserSelection == counter && UserSelection == counter1 && UserSelection ==
