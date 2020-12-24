@@ -23,11 +23,12 @@ public class MessUpdated {
 					counters++;
 				}
 			}
+			for (l = 0; l < 6; l++) {
+				randomcounter[l] = rnd.nextInt(37) + 1;
+			}
+			System.out.println(" Random numbers are: " + randomcounter[l]);
+
 		}
 		System.out.println("You're correct in: " + counters);
-		for (l = 0; l < 6; l++) {
-			randomcounter[l] = rnd.nextInt(37) + 1;
-		}
-		System.out.println(" Random numbers are: " + randomcounter[l]);
 	}
 }
