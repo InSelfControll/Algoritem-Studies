@@ -6,16 +6,14 @@ public class Mess {
 	public static void main(String[] args) {
 
 		// int UserSelection = us();
-		int UserSelection = us(); 
+		int UserSelection = us();
 		int rnd = RandomNumbers();
 		int counter = 0;
-		int i = 0;
-		
-		for (i = 0; i <6 ; i++) {
-			if (UserSelection == rnd ) {
+
+		for (counter = 0; counter < 6; counter++) {
+			if (UserSelection == rnd) {
 				counter++;
-				System.out.println("You guessed the right number! " +  counter);
-				return;
+				System.out.println("You guessed the right number! " + counter);
 			} else {
 				System.out.println("Try next time! ");
 			}
@@ -42,11 +40,38 @@ public class Mess {
 		System.out.println(counter4);
 		System.out.println(counter5);
 
+		
+		/*
+		 * if (counter == counter1) { return counter1; } else if (counter == counter2) {
+		 * return counter2; } else if (counter == counter3) { return counter3; } else if
+		 * (counter == counter4) { return counter4; } else if (counter == counter5) {
+		 * return counter5; }
+		 * 
+		 * if (counter1 == counter) { return counter; } else if (counter1 == counter2) {
+		 * return counter2; } else if (counter1 == counter3) { return counter3; } else
+		 * if (counter1 == counter4) { return counter4; } else if (counter1 == counter5)
+		 * { return counter5; }
+		 * 
+		 * if (counter2 == counter) { return counter; } else if (counter2 == counter1) {
+		 * return counter1; } else if (counter2 == counter3) { return counter3; } else
+		 * if (counter2 == counter4) { return counter4; } else if (counter2 == counter5)
+		 * { return counter5; }
+		 * 
+		 * if (counter3 == counter) { return counter; } else if (counter3 == counter1) {
+		 * return counter2; } else if (counter3 == counter2) { return counter3; } else
+		 * if (counter3 == counter4) { return counter4; } else if (counter3 == counter5)
+		 * { return counter5; }
+		 */
+		
+		
+
 		// if (i < 6 ){
-		//if (UserSelection == counter && UserSelection == counter1 && UserSelection == counter2
-	//			&& UserSelection == counter3 && UserSelection == counter4 && UserSelection == counter5) {
-	//		i++;
-	//		System.out.println("You got a hit! " + i);
+		// if (UserSelection == counter && UserSelection == counter1 && UserSelection ==
+		// counter2
+		// && UserSelection == counter3 && UserSelection == counter4 && UserSelection ==
+		// counter5) {
+		// i++;
+		// System.out.println("You got a hit! " + i);
 //		} else {
 //			System.out.println("Finished! ");
 //		}
