@@ -32,12 +32,12 @@ public class Mess {
 		int counter4 = rnd.nextInt(37) + 1;
 		int counter5 = rnd.nextInt(37) + 1;
 
-		System.out.println(counter);
-		System.out.println(counter1);
+		System.out.println(counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5);
+		/*System.out.println(counter1);
 		System.out.println(counter2);
 		System.out.println(counter3);
 		System.out.println(counter4);
-		System.out.println(counter5);
+		System.out.println(counter5);*/
 
 		/*
 		 * if (counter == counter1) { return counter1; } else if (counter == counter2) {
@@ -92,7 +92,7 @@ public class Mess {
 		int unumber5 = sc.nextInt();
 
 		System.out.println("\n");
-		System.out.println(unumber);
+		System.out.println(unumber + " " + unumber1 + " " + unumber2 + " " + unumber3 + " " + unumber4 + " " + unumber5 + "\n") ;
 		System.out.println(unumber1);
 		System.out.println(unumber2);
 		System.out.println(unumber3);
