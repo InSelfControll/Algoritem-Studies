@@ -18,19 +18,15 @@ public class MessUpdated {
 		int j;
 		int counters = 0;
 
-		for (i = 1; i < 6; i++) {
+		for (i = 1; i <= 7; i++) {
 			usernumber[i] = userinput.nextInt();
 			randomcounter[i] = rnd.nextInt(37) + 1;
-			for (j = 1; j < 6; j++) {
+			for (j = 1; j <= 7; j++) {
 				if (usernumber == randomcounter) {
 					System.out.println(usernumber[j] + "You correct! ");
 					counters++;
-				} else {
-					
 				}
 			}
-			System.out.println("You're failed! ");
-			System.out.println(randomcounter[6]);
 		}
 		System.out.println("You're correct in: " + counters);
 	}
