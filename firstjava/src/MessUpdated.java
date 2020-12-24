@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class MessUpdated {
 
@@ -31,9 +30,8 @@ public class MessUpdated {
 			System.out.println("\n");
 			for (l = 0; l < 6; l++) {
 				randomcounter[l] = rnd.nextInt(37) + 1;
-				System.out.println(randomcounter[l]);
 			}
+			System.out.println(" Random number are: " + randomcounter[l]);
 		}
-		System.out.println(usernumber[k]);		
 	}
 }
