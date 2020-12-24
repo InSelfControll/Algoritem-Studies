@@ -9,11 +9,16 @@ public class Mess {
 		int UserSelection = us(); 
 		int rnd = RandomNumbers();
 		int counter = 0;
-		if (UserSelection == rnd ) {
-			counter++;
-			System.out.println("You guessed the right number! " +  counter);
-		} else {
-			System.out.println("Try next time! ");
+		int i = 0;
+		
+		for (i = 0; i <6 ; i++) {
+			if (UserSelection == rnd ) {
+				counter++;
+				System.out.println("You guessed the right number! " +  counter);
+				return;
+			} else {
+				System.out.println("Try next time! ");
+			}
 		}
 	}
 
