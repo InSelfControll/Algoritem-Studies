@@ -18,10 +18,10 @@ public class MessUpdated {
 		int j;
 		int counters = 0;
 
-		for (i = 1; i <= 6; i++) {
+		for (i = 1; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			randomcounter[i] = rnd.nextInt(37) + 1;
-			for (j = 1; j <= 6; j++) {
+			for (j = 1; j < 6; j++) {
 				if (usernumber == randomcounter) {
 					System.out.println(usernumber[i] + "You correct! ");
 					counters++;
