@@ -6,8 +6,15 @@ public class Mess {
 	public static void main(String[] args) {
 
 		// int UserSelection = us();
-		us();
-		RandomNumbers();
+		int UserSelection = us(); 
+		int rnd = RandomNumbers();
+		int counter = 0;
+		if (UserSelection == rnd ) {
+			counter++;
+			System.out.println("You guessed the right number! " +  counter);
+		} else {
+			System.out.println("Try next time! ");
+		}
 	}
 
 	public static int RandomNumbers() {
@@ -15,7 +22,6 @@ public class Mess {
 		Random rnd = new Random();
 
 		int i = 0;
-		int UserSelection = us();
 
 		int counter = rnd.nextInt(4) + 1;
 		int counter1 = rnd.nextInt(37) + 1;
@@ -32,13 +38,13 @@ public class Mess {
 		System.out.println(counter5);
 
 		// if (i < 6 ){
-		if (UserSelection == counter && UserSelection == counter1 && UserSelection == counter2
-				&& UserSelection == counter3 && UserSelection == counter4 && UserSelection == counter5) {
-			i++;
-			System.out.println("You got a hit! " + i);
-		} else {
-			System.out.println("Finished! ");
-		}
+		//if (UserSelection == counter && UserSelection == counter1 && UserSelection == counter2
+	//			&& UserSelection == counter3 && UserSelection == counter4 && UserSelection == counter5) {
+	//		i++;
+	//		System.out.println("You got a hit! " + i);
+//		} else {
+//			System.out.println("Finished! ");
+//		}
 		// }else {
 
 		// }
