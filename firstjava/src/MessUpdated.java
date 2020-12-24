@@ -30,25 +30,23 @@ public class MessUpdated {
 
 		int counters = 0;
 		int i = 0;
-		while (i <= 7) {
-			if (unumber == counter || unumber1 == counter || unumber2 == counter || unumber3 == counter
-					|| unumber4 == counter || unumber5 == counter && unumber == counter1 || unumber1 == counter1
-					|| unumber2 == counter1 || unumber3 == counter1 || unumber4 == counter1
-					|| unumber5 == counter1 && unumber == counter2 || unumber1 == counter2 || unumber2 == counter2
-					|| unumber3 == counter2 || unumber4 == counter2 || unumber5 == counter2 && unumber == counter3
-					|| unumber1 == counter3 || unumber2 == counter3 || unumber3 == counter3 || unumber4 == counter3
-					|| unumber5 == counter3 && unumber == counter4 || unumber1 == counter4 || unumber2 == counter4
-					|| unumber3 == counter4 || unumber4 == counter4 || unumber5 == counter4 && unumber == counter5
-					|| unumber1 == counter5 || unumber2 == counter5 || unumber3 == counter5 || unumber4 == counter5
-					|| unumber5 == counter5) {
-				counters++;
+		if (unumber == counter || unumber1 == counter || unumber2 == counter || unumber3 == counter
+				|| unumber4 == counter || unumber5 == counter && unumber == counter1 || unumber1 == counter1
+				|| unumber2 == counter1 || unumber3 == counter1 || unumber4 == counter1
+				|| unumber5 == counter1 && unumber == counter2 || unumber1 == counter2 || unumber2 == counter2
+				|| unumber3 == counter2 || unumber4 == counter2 || unumber5 == counter2 && unumber == counter3
+				|| unumber1 == counter3 || unumber2 == counter3 || unumber3 == counter3 || unumber4 == counter3
+				|| unumber5 == counter3 && unumber == counter4 || unumber1 == counter4 || unumber2 == counter4
+				|| unumber3 == counter4 || unumber4 == counter4 || unumber5 == counter4 && unumber == counter5
+				|| unumber1 == counter5 || unumber2 == counter5 || unumber3 == counter5 || unumber4 == counter5
+				|| unumber5 == counter5) {
+			counters++;
 
-				System.out.println("You guessed  " + counters + " right!" + " \n");
-				return;
+			System.out.println("You guessed  " + counters + " right!" + " \n");
+			return;
 
-			} else {
-				System.out.println("You failed! ");
-			}
+		} else {
+			System.out.println("You failed! ");
 		}
 		System.out.println(
 				counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5 + "\n");
