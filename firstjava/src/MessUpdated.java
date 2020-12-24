@@ -49,29 +49,21 @@ public class MessUpdated {
 		int counter4 = rnd.nextInt(37) + 1;
 		int counter5 = rnd.nextInt(37) + 1;
 
-		int i = 1;
 		int counters = 0;
-		if (counter == unumber || counter == unumber1 || counter == unumber2 || counter == unumber3
-				|| counter == unumber4 || counter == unumber5) {
-
-		} else if (counter1 == unumber || counter1 == unumber1 || counter1 == unumber2 || counter1 == unumber3
-				|| counter1 == unumber4 || counter1 == unumber5) {
-			return 0;
-		} else if (counter2 == unumber || counter2 == unumber1 || counter2 == unumber2 || counter2 == unumber3
-				|| counter2 == unumber4 || counter2 == unumber5) {
-			return 0;
-		} else if (counter3 == unumber || counter3 == unumber1 || counter3 == unumber2 || counter3 == unumber3
-				|| counter3 == unumber4 || counter3 == unumber5) {
-			return 0;
-		} else if (counter4 == unumber || counter4 == unumber1 || counter4 == unumber2 || counter4 == unumber3
-				|| counter4 == unumber4 || counter4 == unumber5) {
-			return 0;
-		} else if (counter5 == unumber || counter5 == unumber1 || counter5 == unumber2 || counter5 == unumber3
-				|| counter5 == unumber4 || counter5 == unumber5) {
+		if (unumber == counter || unumber1 == counter || unumber2 == counter || unumber3 == counter
+				|| unumber4 == counter || unumber5 == counter && unumber == counter1 || unumber1 == counter1
+				|| unumber2 == counter1 || unumber3 == counter1 || unumber4 == counter1
+				|| unumber5 == counter1 && unumber == counter2 || unumber1 == counter2 || unumber2 == counter2
+				|| unumber3 == counter2 || unumber4 == counter2 || unumber5 == counter2 && unumber == counter3
+				|| unumber1 == counter3 || unumber2 == counter3 || unumber3 == counter3 || unumber4 == counter3
+				|| unumber5 == counter3 && unumber == counter4 || unumber1 == counter4 || unumber2 == counter4
+				|| unumber3 == counter4 || unumber4 == counter4 || unumber5 == counter4 && unumber == counter5
+				|| unumber1 == counter5 || unumber2 == counter5 || unumber3 == counter5 || unumber4 == counter5
+				|| unumber5 == counter5) {
 			counters++;
+
 			String msg = "You guessed the right number! " + counters + " \n";
 			System.out.println(msg);
-			return counters;
 
 		} else {
 			System.out.println("You failed! ");
