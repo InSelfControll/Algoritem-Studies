@@ -41,8 +41,6 @@ public class MessUpdated {
 				|| unumber1 == counter5 || unumber2 == counter5 || unumber3 == counter5 || unumber4 == counter5
 				|| unumber5 == counter5) {
 			counters++;
-
-			System.out.println("You guessed  " + counters + " right!" + " \n");
 			System.out.println(counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " "
 					+ counter5 + "\n");
 			return;
@@ -52,6 +50,6 @@ public class MessUpdated {
 			System.out.println(
 					counter + " " + counter1 + " " + counter2 + " " + counter3 + " " + counter4 + " " + counter5 + "\n");
 		}
-
+		System.out.println("You guessed  " + counters + " right!" + " \n");
 	}
 }
