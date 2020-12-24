@@ -13,8 +13,7 @@ public class MessUpdated {
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
 
-		int i;
-		int j;
+		int i,j,k,l;
 		int counters = 0;
 
 		for (i = 0; i < 6; i++) {
@@ -27,11 +26,14 @@ public class MessUpdated {
 			}
 		}
 		System.out.println("You're correct in: " + counters);
-		for (i = 0; i < 6; i++) {
-			System.out.println(usernumber[i]);
-			for (j = 0; j < 6; j++) {
-				System.out.println(randomcounter[j]);
+		for (k = 0; k < 6; k++) {
+			usernumber[k] = userinput.nextInt();
+			System.out.println("\n");
+			for (l = 0; l < 6; l++) {
+				randomcounter[l] = rnd.nextInt(37) + 1;
+				System.out.println(randomcounter[l]);
 			}
 		}
+		System.out.println(usernumber[k]);		
 	}
 }
