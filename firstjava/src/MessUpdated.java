@@ -23,7 +23,7 @@ public class MessUpdated {
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
-				if (randomcounter[j] == usernumber[i]) {
+				if (usernumber[i] == randomcounter[j]) {
 					counters++;
 				}else {
 				}
