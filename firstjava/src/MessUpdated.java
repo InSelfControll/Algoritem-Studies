@@ -18,10 +18,17 @@ public class MessUpdated {
 
 		int i,j,l;
 		int counters = 0;
-		boolean listis = false;
 		
 		for (j = 0; j < 6 ;j ++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
+			boolean check = true;
+			while (check) {
+				if ( check == false) {
+					j++;
+				} else {
+					//System.out.println("Done! ");
+				}
+			}
 			/*System.out.println("Random numbers are: " + randomcounter[j]);*/
 		}
 		
