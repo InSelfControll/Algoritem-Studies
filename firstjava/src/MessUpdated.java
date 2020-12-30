@@ -13,24 +13,27 @@ public class MessUpdated {
 
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
-		List < Integer > numbers = new ArrayList < > ();
+		List<Integer> numbers = new ArrayList<>();
 
-
-		int i,j,l;
+		int i, j, l;
 		int counters = 0;
-		
-		for (j = 0; j < 6 ;j ++) {
+
+
+		for (j = 0; j < 6; j++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
-			/*System.out.println("Random numbers are: " + randomcounter[j]);*/
+			/* System.out.println("Random numbers are: " + randomcounter[j]); */
 		}
-		
+
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
 				if (usernumber[i] == randomcounter[j]) {
 					counters++;
-				}else {
+				} else {
 				}
+			}
+			if (usernumber[i] == usernumber[i]) {
+
 			}
 		}
 		System.out.println("You're correct in: " + counters);
