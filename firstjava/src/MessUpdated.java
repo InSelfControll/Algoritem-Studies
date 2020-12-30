@@ -21,14 +21,6 @@ public class MessUpdated {
 		
 		for (j = 0; j < 6 ;j ++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
-			boolean check = true;
-			while (check) {
-				if ( check == false) {
-					j++;
-				} else {
-					//System.out.println("Done! ");
-				}
-			}
 			/*System.out.println("Random numbers are: " + randomcounter[j]);*/
 		}
 		
