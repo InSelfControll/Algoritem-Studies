@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,9 +13,12 @@ public class MessUpdated {
 
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
+		List < Integer > numbers = new ArrayList < > ();
+
 
 		int i,j,l;
 		int counters = 0;
+		boolean listis = false;
 		
 		for (j = 0; j < 6 ;j ++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
