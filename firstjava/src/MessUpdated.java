@@ -23,17 +23,16 @@ public class MessUpdated {
 		 * System.out.println("Random numbers are: " + randomcounter[j]); }
 		 */
 
-		boolean isSame = true;
+		boolean isSame = false;
 		while (isSame) {
-			isSame = false;
+			isSame = true;
 			for (j = 0; j < 6; j++) {
-				randomcounter[j] = rnd.nextInt(37) + 1;
 				for (j = 0; j < 6; j++) {
+					randomcounter[j] = rnd.nextInt(37) + 1;
 					if (randomcounter[j] == randomcounter[j]) {
 						isSame = true;
 					}
 				}
-				System.out.println("Random numbers are: " + randomcounter[j]);
 			}
 		}
 		for (i = 0; i < 6; i++) {
