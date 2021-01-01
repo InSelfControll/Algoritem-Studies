@@ -28,9 +28,10 @@ public class MessUpdated {
 		boolean isSame = true;
 		while (isSame) {
 			isSame = false;
-			for (j = 0; j < 6; j++) { 
+			for (j = 1; j < 6; j++) { 
 				//randomcounter[j] = rnd.nextInt(37) + 1;
-				for (l = 0; l < 6; l++) {
+				for (l = 1; l < 6; l++) {
+					//randomcounter[l] = rnd.nextInt(37) + 1;
 					if (randomcounter[l] == randomcounter[j]) {
 						randomcounter[j] = rnd.nextInt(37) + 1;
 						isSame = true;
