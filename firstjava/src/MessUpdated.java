@@ -21,7 +21,10 @@ public class MessUpdated {
 
 		for (j = 0; j < 6; j++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
-			/* System.out.println("Random numbers are: " + randomcounter[j]); */
+			if (randomcounter[j] == randomcounter.hashCode() ) {
+				
+			}
+		System.out.println("Random numbers are: " + randomcounter[j]); 
 		}
 
 		for (i = 0; i < 6; i++) {
