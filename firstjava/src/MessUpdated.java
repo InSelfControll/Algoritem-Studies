@@ -18,18 +18,21 @@ public class MessUpdated {
 		int counters = 0;
 
 		/*
-		 * for (j = 0; j < 6; j++) { randomcounter[j] = rnd.nextInt(37) + 1;
+		 * for (j = 0; j < 6; j++) { 
+		 * randomcounter[j] = rnd.nextInt(37) + 1;
 		 * 
-		 * System.out.println("Random numbers are: " + randomcounter[j]); }
+		 * System.out.println("Random numbers are: " + randomcounter[j]);
+		 *  }
 		 */
 
-		boolean isSame = false;
+		boolean isSame = true;
 		while (isSame) {
-			isSame = true;
-			for (j = 0; j < 6; j++) {
-				for (j = 0; j < 6; j++) {
-					randomcounter[j] = rnd.nextInt(37) + 1;
-					if (randomcounter[j] == randomcounter[j]) {
+			isSame = false;
+			for (j = 0; j < 6; j++) { 
+				//randomcounter[j] = rnd.nextInt(37) + 1;
+				for (l = 0; l < 6; l++) {
+					if (randomcounter[j] == randomcounter[l]) {
+						randomcounter[j] = rnd.nextInt(37) + 1;
 						isSame = true;
 					}
 				}
