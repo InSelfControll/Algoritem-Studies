@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class MessUpdated {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 
 		// int UserSelection = us();
@@ -32,12 +33,13 @@ public class MessUpdated {
 				//randomcounter[j] = rnd.nextInt(37) + 1;
 				for (l = 1; l < 6; l++) {
 					//randomcounter[l] = rnd.nextInt(37) + 1;
-					if (randomcounter[l] == randomcounter[j]) {
+					if (randomcounter[j] == randomcounter[j] && randomcounter[j] == 0) {
 						randomcounter[j] = rnd.nextInt(37) + 1;
 						isSame = true;
 					}
 				}
 			}
+			break;
 		}
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
