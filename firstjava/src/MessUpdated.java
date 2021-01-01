@@ -31,7 +31,7 @@ public class MessUpdated {
 			for (j = 0; j < 6; j++) { 
 				//randomcounter[j] = rnd.nextInt(37) + 1;
 				for (l = 0; l < 6; l++) {
-					if (randomcounter[j] == randomcounter[l]) {
+					if (randomcounter[l] == randomcounter[j]) {
 						randomcounter[j] = rnd.nextInt(37) + 1;
 						isSame = true;
 					}
