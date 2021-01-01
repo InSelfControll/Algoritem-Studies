@@ -13,20 +13,29 @@ public class MessUpdated {
 
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
-		List<Integer> numbers = new ArrayList<>();
 
 		int i, j, l;
 		int counters = 0;
 
+		/*
+		 * for (j = 0; j < 6; j++) { randomcounter[j] = rnd.nextInt(37) + 1;
+		 * 
+		 * System.out.println("Random numbers are: " + randomcounter[j]); }
+		 */
 
-		for (j = 0; j < 6; j++) {
-			randomcounter[j] = rnd.nextInt(37) + 1;
-			if (randomcounter[j] == randomcounter.hashCode() ) {
-				
+		boolean isSame = true;
+		while (isSame) {
+			isSame = false;
+			for (j = 0; j < 6; j++) {
+				randomcounter[j] = rnd.nextInt(37) + 1;
+				for (j = 0; j < 6; j++) {
+					if (randomcounter[j] == randomcounter[j]) {
+						isSame = true;
+					}
+				}
+				System.out.println("Random numbers are: " + randomcounter[j]);
 			}
-		System.out.println("Random numbers are: " + randomcounter[j]); 
 		}
-
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
