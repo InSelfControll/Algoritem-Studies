@@ -18,29 +18,19 @@ public class MessUpdated {
 		int i, j, l;
 		int counters = 0;
 
-		/*
-		 * for (j = 0; j < 6; j++) { 
-		 * randomcounter[j] = rnd.nextInt(37) + 1;
-		 * 
-		 * System.out.println("Random numbers are: " + randomcounter[j]);
-		 *  }
-		 */
+		for (j = 0; j < 6; j++) {
+			randomcounter[j] = rnd.nextInt(37) + 1;
 
-		boolean isSame = true;
-		while (isSame) {
-			isSame = false;
-			for (j = 1; j < 6; j++) { 
-				//randomcounter[j] = rnd.nextInt(37) + 1;
-				for (l = 1; l < 6; l++) {
-					//randomcounter[l] = rnd.nextInt(37) + 1;
-					if (randomcounter[j] == randomcounter[j] && randomcounter[j] == 0) {
-						randomcounter[j] = rnd.nextInt(37) + 1;
-						isSame = true;
-					}
-				}
-			}
-			break;
+			System.out.println("Random numbers are: " + randomcounter[j]);
 		}
+
+		/*
+		 * boolean isSame = true; while (isSame) { isSame = false; for (j = 1; j < 6;
+		 * j++) { // randomcounter[j] = rnd.nextInt(37) + 1; for (l = 1; l < 6; l++) {
+		 * // randomcounter[l] = rnd.nextInt(37) + 1; if (randomcounter[j] ==
+		 * randomcounter[j] && randomcounter[j] == 0) { randomcounter[j] =
+		 * rnd.nextInt(37) + 1; isSame = true; } } } // break; }
+		 */
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
