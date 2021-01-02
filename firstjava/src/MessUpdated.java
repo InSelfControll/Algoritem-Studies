@@ -30,7 +30,8 @@ public class MessUpdated {
 					isSame = false;
 				}
 			}
-			System.out.println("Random numbers are: " + randomcounter[j]);
+			// Print the random numbers for testing if there is something twice
+			//System.out.println("Random numbers are: " + randomcounter[j]);
 		}
 
 		for (i = 0; i < 6; i++) {
