@@ -23,15 +23,15 @@ public class MessUpdated {
 		for (j = 0; j < 6; j++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
 			while (isSame) {
-				isSame = false;
+				//isSame = false;
 				if (randomcounter[j] == randomcounter[j] && randomcounter[j] == 0) {
-					isSame = true;
+					randomcounter[j] = randomcounter[j];
+				}else {
+					isSame = false;
 				}
 			}
 			System.out.println("Random numbers are: " + randomcounter[j]);
 		}
-
-
 
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
