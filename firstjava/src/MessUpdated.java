@@ -28,7 +28,7 @@ public class MessUpdated {
             if(numbers.add(rnd.nextInt(37)+1)){
                 i++;
             }
-            System.out.println("Random numbers are: " + randomcounter[j]);
+            System.out.println("Random numbers are: " + i);
         }
 
 		for (i = 0; i < 6; i++) {
