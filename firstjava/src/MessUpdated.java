@@ -1,11 +1,9 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MessUpdated {
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 
 		// int UserSelection = us();
@@ -18,25 +16,24 @@ public class MessUpdated {
 		int i, j, l;
 		int counters = 0;
 
-		
 		boolean isSame = true;
 		for (j = 0; j < 6; j++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
-			while (isSame) {
-			    isSame = false;
-			        for (l = 1; l < 6; l++) {
-			            if (randomcounter[j] == randomcounter[j]) {
-			                randomcounter[j] = rnd.nextInt(37) + 1;
-			                isSame = true;
-			            }
-			            if (randomcounter[j] == 0){
-			                randomcounter[j] = rnd.nextInt(37) + 1;
-			                isSame = true;
-			            }
-			        }
-			    }
 			// Print the random numbers for testing if there is something twice
 			System.out.println("Random numbers are: " + randomcounter[j]);
+
+			while (isSame) {
+				isSame = false;
+				for (l = 0; l < 6; l++) {
+					//randomcounter[l] = randomcounter[j];
+					if (randomcounter[j] == randomcounter[j]) {
+						isSame = false;
+					}
+					if (randomcounter[j] == 0) {
+						isSame = false;
+					}
+				}
+			}
 		}
 
 		for (i = 0; i < 6; i++) {
