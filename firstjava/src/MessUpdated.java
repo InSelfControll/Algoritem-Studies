@@ -29,13 +29,17 @@ public class MessUpdated {
 			int number = rnd.nextInt(37) + 1;
 			if (!randomcounter.contains(number)) {
 				randomcounter.add(number);
-			}
+			}			
 		}
+		// First print all random number after generated for cehck for duplications
+		/*for (j = 0; j < 6; j++) {
+			System.out.println("Random numbers are: " + randomcounter.get(j));
+		}*/
 
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
-				if (usernumber[i] == randomcounter.get(i)) {
+				if (usernumber[i] == randomcounter.get(j)) {
 					counters++;
 				} else {
 				}
