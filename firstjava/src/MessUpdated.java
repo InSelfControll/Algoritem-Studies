@@ -9,7 +9,6 @@ public class MessUpdated {
 		lotto();
 	}
 
-	@SuppressWarnings("unlikely-arg-type")
 	public static int lotto() {
 
 		// int UserSelection = us();
@@ -18,34 +17,19 @@ public class MessUpdated {
 
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
-		Set<Integer> rnd1 = new HashSet<Integer>();
+		 Set<Integer> numbers = new HashSet<>();
 
-		int i;
-		int l = 0, j = 0;
+		int i = 0;
+		int j = 0;
 		int counters = 0;
 
-		boolean isSame = true;
-		/*
-		 * for (j = 0; j < 6; j++) { randomcounter[j] = rnd.nextInt(37) + 1; // Print
-		 * the random numbers for testing if there is something twice
-		 * System.out.println("Random numbers are: " + randomcounter[j]); }
-		 */
-
-		for (j = 0; j < randomcounter.length; j++) {
-			randomcounter[j] = rnd.nextInt(37) + 1;
-			// Print the random numbers for testing if there is something twice
-			System.out.println("Random numbers are: " + randomcounter[j]);
-			while (isSame && j < randomcounter.length) {
-				if (randomcounter.equals(randomcounter)) {
-					randomcounter[j]++;
-					//isSame =  true;
-				}
-				if (randomcounter.equals(0) ) {
-					randomcounter[j]++;
-					continue;
-				}
-			}
-		}
+		randomcounter[j] = rnd.nextInt(37)+1;
+        while(i < 6){
+            if(numbers.add(rnd.nextInt(37)+1)){
+                i++;
+            }
+            System.out.println("Random numbers are: " + randomcounter[j]);
+        }
 
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
