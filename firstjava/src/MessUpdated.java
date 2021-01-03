@@ -35,18 +35,18 @@ public class MessUpdated {
 				// Print the random numbers for testing if there is something twice
 				System.out.println("Random numbers are: " + randomcounter[j]);
 				// isSame = false;
-				if (randomcounter[j] == randomcounter[j]) {
-					isSame = true;
-					randomcounter[j] = rnd.nextInt(37) + 1;
+				for (l = 0; l < 6; l++) {
+					randomcounter[j] = randomcounter[l];
+					if (randomcounter[j] == randomcounter[l]) {
+						isSame = true;
+						randomcounter[j] = rnd.nextInt(37) + 1;
+					}
+					if (randomcounter[l] == 0) {
+						isSame = true;
+						randomcounter[j] = rnd.nextInt(37) + 1;
+					}
 				}
-				if (randomcounter[j] == 0) {
-					isSame = true;
-					randomcounter[j] = rnd.nextInt(37) + 1;
-				}
-
-				/*
-				 * for (l = 0; l < 6; l++) { // randomcounter[l] = randomcounter[j]; }
-				 */			}
+			}
 		} while (l < 6 && isSame);
 
 		for (i = 0; i < 6; i++) {
