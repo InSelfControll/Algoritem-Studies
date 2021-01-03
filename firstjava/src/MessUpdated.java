@@ -8,7 +8,7 @@ public class MessUpdated {
 	public static void main(String[] args) {
 		lotto();
 	}
-
+	
 	public static int lotto() {
 
 		// int UserSelection = us();
@@ -24,13 +24,8 @@ public class MessUpdated {
 		int counters = 0;
 
 		randomcounter[j] = rnd.nextInt(37)+1;
-        while(i < 6){
-            if(numbers.add(rnd.nextInt(37)+1)){
-                i++;
-            }
-            System.out.println("Random numbers are: " + i);
-        }
-
+		contains(randomcounter, j);
+		
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
@@ -50,4 +45,12 @@ public class MessUpdated {
 		}
 		return 0;
 	}
+	public static boolean contains(int[] randomcounter, int x){
+        for(int i = 0; i < randomcounter.length; i++){
+            if(randomcounter[i] == x){
+                return true;
+            }
+        }
+        return false;
+    }
 }

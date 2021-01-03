@@ -6,4 +6,9 @@
       <module name="Algoritem-Studies" target="" />
     </bytecodeTargetLevel>
   </component>
+  <component name="EclipseCompilerSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Algoritem-Studies" options="" />
+    </option>
+  </component>
 </project>
