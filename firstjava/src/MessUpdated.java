@@ -23,15 +23,20 @@ public class MessUpdated {
 		for (j = 0; j < 6; j++) {
 			randomcounter[j] = rnd.nextInt(37) + 1;
 			while (isSame) {
-				//isSame = false;
-				if (randomcounter[j] == randomcounter[j] && randomcounter[j] == 0) {
-					randomcounter[j] = randomcounter[j];
-				}else {
-					isSame = false;
-				}
-			}
+			    isSame = false;
+			        for (l = 1; l < 6; l++) {
+			            if (randomcounter[j] == randomcounter[j]) {
+			                randomcounter[j] = rnd.nextInt(37) + 1;
+			                isSame = true;
+			            }
+			            if (randomcounter[j] == 0){
+			                randomcounter[j] = rnd.nextInt(37) + 1;
+			                isSame = true;
+			            }
+			        }
+			    }
 			// Print the random numbers for testing if there is something twice
-			//System.out.println("Random numbers are: " + randomcounter[j]);
+			System.out.println("Random numbers are: " + randomcounter[j]);
 		}
 
 		for (i = 0; i < 6; i++) {
