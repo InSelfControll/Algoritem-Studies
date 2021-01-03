@@ -36,12 +36,12 @@ public class MessUpdated {
 					randomcounter[j] = randomcounter[l];
 					if (randomcounter[j] == randomcounter[l]) {
 						isSame = true;
-						randomcounter[l] = rnd.nextInt(37) + 1;
+						randomcounter[j] = rnd.nextInt(37) + 1;
 
 					}
 					if (randomcounter[l] == 0) {
 						isSame = true;
-						randomcounter[l] = rnd.nextInt(37) + 1;
+						randomcounter[j] = rnd.nextInt(37) + 1;
 					}
 				}
 			}
