@@ -17,8 +17,8 @@ public class MessUpdated {
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
 
-		int i, j;
-		int l = 0;
+		int i;
+		int l = 0, j = 0;
 		int counters = 0;
 
 		boolean isSame = true;
@@ -27,25 +27,27 @@ public class MessUpdated {
 		 * the random numbers for testing if there is something twice
 		 * System.out.println("Random numbers are: " + randomcounter[j]); }
 		 */
-		while (l < 6 && isSame) {
-			isSame = false;
+
+		do {
+			// isSame = false;
 			for (j = 0; j < 6; j++) {
 				randomcounter[j] = rnd.nextInt(37) + 1;
+				// Print the random numbers for testing if there is something twice
 				System.out.println("Random numbers are: " + randomcounter[j]);
-				for (l = 0; l < 6; l++) {
-					randomcounter[j] = randomcounter[l];
-					if (randomcounter[j] == randomcounter[l]) {
-						isSame = true;
-						randomcounter[j] = rnd.nextInt(37) + 1;
-
-					}
-					if (randomcounter[l] == 0) {
-						isSame = true;
-						randomcounter[j] = rnd.nextInt(37) + 1;
-					}
+				// isSame = false;
+				if (randomcounter[j] == randomcounter[j]) {
+					isSame = true;
+					randomcounter[j] = rnd.nextInt(37) + 1;
 				}
-			}
-		}
+				if (randomcounter[j] == 0) {
+					isSame = true;
+					randomcounter[j] = rnd.nextInt(37) + 1;
+				}
+
+				/*
+				 * for (l = 0; l < 6; l++) { // randomcounter[l] = randomcounter[j]; }
+				 */			}
+		} while (l < 6 && isSame);
 
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
