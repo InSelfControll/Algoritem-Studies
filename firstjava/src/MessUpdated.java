@@ -27,26 +27,29 @@ public class MessUpdated {
 		 * System.out.println("Random numbers are: " + randomcounter[j]); }
 		 */
 
-		for (j = 0; j < 6; j++) {
-			randomcounter[j] = rnd.nextInt(37) + 1;
-			// Print the random numbers for testing if there is something twice
-			System.out.println("Random numbers are: " + randomcounter[j]);
-
-			do {
-				randomcounter[j] = randomcounter[l];
-				// isSame = false;
-				// isSame = false;
-				for (l = 0; l < 6; l++) {
-					if (randomcounter[j] == randomcounter[j]) {
-						isSame = true;
-						randomcounter[j] = rnd.nextInt(37) + 1;
-					}
-					if (randomcounter[j] == 0) {
-						isSame = true;
-						randomcounter[j] = rnd.nextInt(37) + 1;
-					}
+		// isSame = false;
+		// isSame = false;
+		while (isSame) {
+			isSame = false;
+			for (j = 0; j < 6; j++) {
+				randomcounter[j] = rnd.nextInt(37) + 1;
+				// Print the random numbers for testing if there is something twice
+				System.out.println("Random numbers are: " + randomcounter[j]);
+				if (randomcounter[j] == randomcounter[j]) {
+					randomcounter[j] = rnd.nextInt(37) + 1;
+				}else {
+					randomcounter[j] = rnd.nextInt(37) + 1;
+					continue;
 				}
-			} while (j < 6 && isSame);
+				if (randomcounter[j] == 0) {
+					randomcounter[j] = rnd.nextInt(37) + 1;
+				}else {
+					randomcounter[j] = rnd.nextInt(37) + 1;
+					continue;
+				}
+				randomcounter[j] = rnd.nextInt(37) + 1;
+				continue;
+			}
 		}
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
