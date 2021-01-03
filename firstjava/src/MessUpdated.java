@@ -17,7 +17,8 @@ public class MessUpdated {
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
 
-		int i, j, l;
+		int i, j;
+		int l = 0;
 		int counters = 0;
 
 		boolean isSame = true;
@@ -26,17 +27,21 @@ public class MessUpdated {
 		 * the random numbers for testing if there is something twice
 		 * System.out.println("Random numbers are: " + randomcounter[j]); }
 		 */
-		while (isSame) {
+		while (l < 6) {
 			isSame = false;
 			for (j = 0; j < 6; j++) {
 				randomcounter[j] = rnd.nextInt(37) + 1;
 				System.out.println("Random numbers are: " + randomcounter[j]);
-				if (randomcounter[j] == randomcounter[j]) {
-					//isSame = true;
-					break;
-				}
-				if (randomcounter[j] == 0) {
-					break;
+				for (l = 0; l < 6; l++) {
+					if (randomcounter[j] == randomcounter[j]) {
+						isSame = true;
+						randomcounter[j] = rnd.nextInt(37) + 1;
+
+					}
+					if (randomcounter[l] == 0) {
+						isSame = true;
+						randomcounter[j] = rnd.nextInt(37) + 1;
+					}
 				}
 			}
 		}
