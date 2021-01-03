@@ -1,5 +1,7 @@
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 
 public class MessUpdated {
 
@@ -15,6 +17,7 @@ public class MessUpdated {
 
 		int[] usernumber = new int[6];
 		int[] randomcounter = new int[6];
+		Set<Integer> rnd1 = new HashSet<Integer>();
 
 		int i;
 		int l = 0, j = 0;
@@ -27,30 +30,31 @@ public class MessUpdated {
 		 * System.out.println("Random numbers are: " + randomcounter[j]); }
 		 */
 
-		// isSame = false;
-		// isSame = false;
-		while (isSame) {
-			isSame = false;
-			for (j = 0; j < 6; j++) {
-				randomcounter[j] = rnd.nextInt(37) + 1;
-				// Print the random numbers for testing if there is something twice
-				System.out.println("Random numbers are: " + randomcounter[j]);
-				if (randomcounter[j] == randomcounter[j]) {
-					randomcounter[j] = rnd.nextInt(37) + 1;
-				}else {
-					randomcounter[j] = rnd.nextInt(37) + 1;
-					continue;
-				}
-				if (randomcounter[j] == 0) {
-					randomcounter[j] = rnd.nextInt(37) + 1;
-				}else {
-					randomcounter[j] = rnd.nextInt(37) + 1;
-					continue;
-				}
-				randomcounter[j] = rnd.nextInt(37) + 1;
+		for (j = 0; j < randomcounter.length; j++) {
+			randomcounter[j] = rnd.nextInt(37) + 1;
+			// Print the random numbers for testing if there is something twice
+			System.out.println("Random numbers are: " + randomcounter[j]);
+			if (randomcounter[j] == randomcounter[j]) {
+				continue;
+			}
+			if (randomcounter[j] == 0) {
 				continue;
 			}
 		}
+		/*
+		 * for (int j1 : randomcounter) { if (!rnd1.add(j1)) { System.out.println(j1 +
+		 * " is a duplicate"); } }
+		 */
+		// isSame = false;
+		// isSame = false;
+		// while (isSame) {
+		// isSame = false;
+		/*
+		 * if (randomcounter[j] == randomcounter[j]) { continue; } if (randomcounter[j]
+		 * == 0) { break; }
+		 */ // }
+		// }
+
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
