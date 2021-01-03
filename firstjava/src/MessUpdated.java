@@ -27,20 +27,21 @@ public class MessUpdated {
 		 * the random numbers for testing if there is something twice
 		 * System.out.println("Random numbers are: " + randomcounter[j]); }
 		 */
-		while (l < 6) {
+		while (l < 6 && isSame) {
 			isSame = false;
 			for (j = 0; j < 6; j++) {
 				randomcounter[j] = rnd.nextInt(37) + 1;
 				System.out.println("Random numbers are: " + randomcounter[j]);
 				for (l = 0; l < 6; l++) {
-					if (randomcounter[j] == randomcounter[j]) {
+					randomcounter[j] = randomcounter[l];
+					if (randomcounter[j] == randomcounter[l]) {
 						isSame = true;
-						randomcounter[j] = rnd.nextInt(37) + 1;
+						randomcounter[l] = rnd.nextInt(37) + 1;
 
 					}
 					if (randomcounter[l] == 0) {
 						isSame = true;
-						randomcounter[j] = rnd.nextInt(37) + 1;
+						randomcounter[l] = rnd.nextInt(37) + 1;
 					}
 				}
 			}
