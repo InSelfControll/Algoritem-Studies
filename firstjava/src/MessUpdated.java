@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -28,27 +27,27 @@ public class MessUpdated {
 		 * System.out.println("Random numbers are: " + randomcounter[j]); }
 		 */
 
-		do {
-			// isSame = false;
-			for (j = 0; j < 6; j++) {
-				randomcounter[j] = rnd.nextInt(37) + 1;
-				// Print the random numbers for testing if there is something twice
-				System.out.println("Random numbers are: " + randomcounter[j]);
+		for (j = 0; j < 6; j++) {
+			randomcounter[j] = rnd.nextInt(37) + 1;
+			// Print the random numbers for testing if there is something twice
+			System.out.println("Random numbers are: " + randomcounter[j]);
+
+			do {
+				randomcounter[j] = randomcounter[l];
+				// isSame = false;
 				// isSame = false;
 				for (l = 0; l < 6; l++) {
-					randomcounter[j] = randomcounter[l];
-					if (randomcounter[j] == randomcounter[l]) {
+					if (randomcounter[j] == randomcounter[j]) {
 						isSame = true;
 						randomcounter[j] = rnd.nextInt(37) + 1;
 					}
-					if (randomcounter[l] == 0) {
+					if (randomcounter[j] == 0) {
 						isSame = true;
 						randomcounter[j] = rnd.nextInt(37) + 1;
 					}
 				}
-			}
-		} while (l < 6 && isSame);
-
+			} while (j < 6 && isSame);
+		}
 		for (i = 0; i < 6; i++) {
 			usernumber[i] = userinput.nextInt();
 			for (j = 0; j < 6; j++) {
