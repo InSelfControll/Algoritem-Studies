@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class MessUpdated {
 
 	public static void main(String[] args) {
+		lotto();
+	}
+
+	public static boolean lotto() {
 
 		// int UserSelection = us();
 		Scanner userinput = new Scanner(System.in);
@@ -17,21 +21,22 @@ public class MessUpdated {
 		int counters = 0;
 
 		boolean isSame = true;
-		for (j = 0; j < 6; j++) {
-			randomcounter[j] = rnd.nextInt(37) + 1;
-			// Print the random numbers for testing if there is something twice
-			System.out.println("Random numbers are: " + randomcounter[j]);
-
-			while (isSame) {
-				isSame = false;
-				for (l = 0; l < 6; l++) {
-					//randomcounter[l] = randomcounter[j];
-					if (randomcounter[j] == randomcounter[j]) {
-						isSame = false;
-					}
-					if (randomcounter[j] == 0) {
-						isSame = false;
-					}
+		/*
+		 * for (j = 0; j < 6; j++) { randomcounter[j] = rnd.nextInt(37) + 1; // Print
+		 * the random numbers for testing if there is something twice
+		 * System.out.println("Random numbers are: " + randomcounter[j]); }
+		 */
+		while (isSame) {
+			isSame = false;
+			for (j = 0; j < 6; j++) {
+				randomcounter[j] = rnd.nextInt(37) + 1;
+				System.out.println("Random numbers are: " + randomcounter[j]);
+				if (randomcounter[j] == randomcounter[j]) {
+					//isSame = true;
+					break;
+				}
+				if (randomcounter[j] == 0) {
+					break;
 				}
 			}
 		}
@@ -53,5 +58,6 @@ public class MessUpdated {
 		for (j = 0; j < 6; j++) {
 			System.out.println("Random numbers are: " + randomcounter[j]);
 		}
+		return false;
 	}
 }
