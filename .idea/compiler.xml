@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Eclipse" />
+    <option name="DEFAULT_COMPILER" value="Groovy-Eclipse" />
+    <option name="USE_RELEASE_OPTION" value="false" />
     <bytecodeTargetLevel target="15">
-      <module name="Algoritem-Studies" target="" />
+      <module name="firstjava" target="" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="EclipseCompilerSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Algoritem-Studies" options="" />
-    </option>
   </component>
 </project>
