@@ -1,0 +1,8 @@
+always_show_push_wizard=true
+checkBeforeCommitting=true
+commit_dialog_include_untracked=true
+commit_dialog_signed_off_by=true
+decorator_show_dirty_icon=true
+eclipse.preferences.version=1
+resourcehistory_show_first_parent_only=true
+sync_view_show_changeset_model=true
