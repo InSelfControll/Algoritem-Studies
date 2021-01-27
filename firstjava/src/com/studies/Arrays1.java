@@ -9,9 +9,12 @@ public class Arrays1 {
 	public static void main(String[] args) {
 		Random rand = new Random();
 		
-		int I1 = rand.nextInt(10);
-		int Z1 = rand.nextInt(20);
+		int I1 ;
+		int Z1;
 
+		I1 = rand.nextInt(10);
+		Z1 = rand.nextInt(20);
+		
 		int[] I = ForI(I1);
 		int[] Z = ForZ(Z1);
 		
