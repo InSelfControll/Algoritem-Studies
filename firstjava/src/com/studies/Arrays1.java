@@ -17,11 +17,12 @@ public class Arrays1 {
 		I1[i] = rand.nextInt(10);
 		Z1[z] = rand.nextInt(20);
 
-		int[] I = ForZ(I1);
-		int[] Z = ForI(Z1);
+		int[] I = ForI(I1);
+		int[] Z = ForZ(Z1);
+		
 
 		System.out.println("Max: " + "\n");
-		// System.out.println(int(Math.max(I, Z)));
+		System.out.println(Math.max(i, z));
 	}
 
 	public static int[] ForI(int[] I1) {
