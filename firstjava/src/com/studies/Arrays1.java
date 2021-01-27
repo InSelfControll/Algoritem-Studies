@@ -28,21 +28,21 @@ public class Arrays1 {
 	public static int ForI(int[] I1) {
 		Random rand = new Random();
 
-		int[] lop = new int[10];
+		//int[] lop = new int[10];
 		int i;
 		System.out.println("First Array! ");
 		for (i = 0; i < I1.length; i++) {
 			I1[i] = rand.nextInt(10) + 1;
 			System.out.println(I1[i]);
 		}
-		return i;
+		return i++;
 
 	}
 
 	public static int ForZ(int[] Z1) {
 		Random rand = new Random();
 
-		int[] lop1 = new int[20];
+		//int[] lop1 = new int[20];
 		int z;
 
 		System.out.println("\n");
@@ -51,6 +51,6 @@ public class Arrays1 {
 			Z1[z] = rand.nextInt(20);
 			System.out.println(Z1[z]);
 		}
-		return z;
+		return z++;
 	}
 }
