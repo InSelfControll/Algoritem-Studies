@@ -19,17 +19,15 @@ public class Arrays1 {
 
 		int I = ForI(I1);
 		int Z = ForZ(Z1);
-		
 
 		System.out.println("Max: " + "\n");
 		System.out.println(Math.max(I, Z));
 	}
 
-	public static int ForI(int[] I1) {
+	public static int ForI(int[] I1, int i) {
 		Random rand = new Random();
 
-		//int[] lop = new int[10];
-		int i;
+		// int[] lop = new int[10];
 		System.out.println("First Array! ");
 		for (i = 0; i < I1.length; i++) {
 			I1[i] = rand.nextInt(10) + 1;
@@ -39,11 +37,10 @@ public class Arrays1 {
 
 	}
 
-	public static int ForZ(int[] Z1) {
+	public static int ForZ(int[] Z1, int z) {
 		Random rand = new Random();
 
-		//int[] lop1 = new int[20];
-		int z;
+		// int[] lop1 = new int[20];
 
 		System.out.println("\n");
 		System.out.println("Second Array! ");
