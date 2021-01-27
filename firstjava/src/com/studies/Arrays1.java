@@ -27,7 +27,7 @@ public class Arrays1 {
 		int i;
 		System.out.println("First Array! ");
 		for (i = 0; i < lop.length; i++) {
-			//lop[i] = rand.nextInt(10) + 1;
+			lop[I1] = rand.nextInt(10) + 1;
 			System.out.println(lop[i]);
 		}
 		return lop;
@@ -42,7 +42,7 @@ public class Arrays1 {
 		System.out.println("\n");
 		System.out.println("Second Array! ");
 		for (z = 0; z < lop1.length; z++) {
-			//lop1[z] = rand.nextInt(20);
+			lop1[Z1] = rand.nextInt(20);
 			System.out.println(lop1[z]);
 		}
 		return lop1;
