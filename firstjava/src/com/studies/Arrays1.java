@@ -8,19 +8,18 @@ public class Arrays1 {
 
 	public static void main(String[] args) {
 		Random rand = new Random();
-		
+
 		int[] I1 = new int[10];
 		int[] Z1 = new int[20];
 
-			I1[10] = rand.nextInt(10);
-			Z1[20] = rand.nextInt(20);
-		
+		I1[10] = rand.nextInt(10);
+		Z1[20] = rand.nextInt(20);
+
 		int[] I = ForZ(I1);
 		int[] Z = ForI(Z1);
-		
-		
+
 		System.out.println("Max: " + "\n");
-		System.out.println(Math.max(I, Z));
+		// System.out.println(int(Math.max(I, Z)));
 	}
 
 	public static int[] ForI(int[] I1) {
