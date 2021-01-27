@@ -17,29 +17,29 @@ public class Arrays1 {
 		int z = 0 ;
 			Z1[20] = rand.nextInt(20);
 		
-		int[] I = ForI(I1);
-		int[] Z = ForZ(Z1);
+		int[] I = ForZ(I1);
+		int[] Z = ForI(Z1);
 		
 		
 		System.out.println("Max: " + "\n");
 		System.out.println(Math.max(I1, Z1));
 	}
 
-	public static int[] ForI(int I1) {
+	public static int[] ForI(int[] I1) {
 		Random rand = new Random();
 
 		int[] lop = new int[10];
 		int i;
 		System.out.println("First Array! ");
-		for (i = 0; i < lop.length; i++) {
-			lop[I1] = rand.nextInt(10) + 1;
-			System.out.println(lop[i]);
+		for (i = 0; i < I1.length; i++) {
+			I1[10] = rand.nextInt(10) + 1;
+			System.out.println(I1[i]);
 		}
 		return lop;
 
 	}
 
-	public static int[] ForZ(int Z1) {
+	public static int[] ForZ(int[] Z1) {
 		Random rand = new Random();
 
 		int[] lop1 = new int[20];
@@ -47,9 +47,9 @@ public class Arrays1 {
 
 		System.out.println("\n");
 		System.out.println("Second Array! ");
-		for (z = 0; z < lop1.length; z++) {
-			lop1[Z1] = rand.nextInt(20);
-			System.out.println(lop1[z]);
+		for (z = 0; z < Z1.length; z++) {
+			Z1[20] = rand.nextInt(20);
+			System.out.println(Z1[z]);
 		}
 		return lop1;
 	}
