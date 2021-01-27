@@ -9,11 +9,13 @@ public class Arrays1 {
 	public static void main(String[] args) {
 		Random rand = new Random();
 		
-		int I1 ;
-		int Z1;
+		int[] I1 = new int[10];
+		int[] Z1 = new int[20];
 
-		I1 = rand.nextInt(10);
-		Z1 = rand.nextInt(20);
+		int i = 0;
+			I1[10] = rand.nextInt(10);
+		int z = 0 ;
+			Z1[20] = rand.nextInt(20);
 		
 		int[] I = ForI(I1);
 		int[] Z = ForZ(Z1);
@@ -34,8 +36,9 @@ public class Arrays1 {
 			System.out.println(lop[i]);
 		}
 		return lop;
-		 
+
 	}
+
 	public static int[] ForZ(int Z1) {
 		Random rand = new Random();
 
