@@ -17,8 +17,8 @@ public class Arrays1 {
 		I1[i] = rand.nextInt(10);
 		Z1[z] = rand.nextInt(20);
 
-		int I = ForI(I1);
-		int Z = ForZ(Z1);
+		int I = ForI(I1, i);
+		int Z = ForZ(Z1, z);
 
 		System.out.println("Max: " + "\n");
 		System.out.println(Math.max(I, Z));
