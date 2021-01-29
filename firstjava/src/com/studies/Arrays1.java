@@ -22,6 +22,18 @@ public class Arrays1 {
 
 		System.out.println("Max: " + "\n");
 		System.out.println(Math.max(I, Z));
+		
+		System.out.println("First Array! ");
+		for (i = 0; i < I1.length; i++) {
+			I1[i] = rand.nextInt(10) + 1;
+			System.out.println(I1[i]);
+		}
+		System.out.println("\n");
+		System.out.println("Second Array! ");
+		for (z = 0; z < Z1.length; z++) {
+			Z1[z] = rand.nextInt(20);
+			System.out.println(Z1[z]);
+		}
 	}
 
 	public static int ForI(int[] I1, int i) {
