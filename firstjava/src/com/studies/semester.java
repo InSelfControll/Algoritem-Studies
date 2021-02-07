@@ -74,7 +74,7 @@ public class semester {
 			String fcapl = name1[x].substring(0,1).toUpperCase() + name1[x].substring(1);
 			//System.out.println(fcapl);
 		}
-				
+		
 		System.out.println("\n");
 		System.out.println("Write random number between 1 to 40!");
 		while (randomcounter.size() < 10) {
