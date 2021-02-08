@@ -1,125 +1,163 @@
 package com.studies;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-
-import static java.util.concurrent.TimeUnit.*;
 
 public class semester {
 
+	public static int totalStudents = 2;
+	public static int eachArraySize = 6;
+	public static int eachArrayGuess = 7;
 
-	public static void main(String[] args) {
-
-		ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(11);
-
-		System.out.println("Please write 4 names: ");
-		//name(name);
-
-		lotto();
+	public static void main(String[] args) throws InterruptedException {
+		Integer[] lotteryNumbers = null;
+		Map<String, Integer[][]> studentData = null;
+		Map<String, Integer> result = null;
+		while (true) {
+			lotteryNumbers = generateLotteryNumbers(10);
+			studentData = generateStudentData();
+			result = getLotteryResult(lotteryNumbers, studentData);
+			printResults(result);
+			waitforHours(2);
+		}
 	}
 
-	public static void name(String name) {
-		Scanner username = new Scanner(System.in);
-		String[] name1 = new String[10];
-		int x = 0;
-
-		for (x = 0 ; x < 10 ; x++) {
-			name1[x] = username.nextLine();
-		}
-		
-		for (x = 0; x < 4; x++) {
-			name = username.nextLine();
-			if (name.length() < 2) {
-				System.out.println("Please enter name with 2 letters or more ! ");
-			}
-
-		}
-		/*
-		 * while (x < 4) { String name = username.nextLine(); if (name.length() < 2) {
-		 * System.out.println("Please write your name:" + username); } x++;
-		 * 
-		 * }
-		 */
-
+	private static void waitforHours(int hours) throws InterruptedException {
+		System.out.println("Going to wait for " + hours + " hours");
+		TimeUnit.HOURS.sleep(hours);
 	}
 
-	public static int lotto() {
+	private static void printResults(Map<String, Integer> result) {
 
-		// int UserSelection = us();
-		Scanner userinput = new Scanner(System.in);
-		Random rnd = new Random();
-
-		int[] usernumber = new int[10];
-		// int[] randomcounter = new int[6];
-		List<Integer> randomcounter = new ArrayList<Integer>();
-
-		int i = 0;
-		int j = 0;
-		int counters = 0;
-		int flight = 0;
-
-		
-		Scanner username = new Scanner(System.in);
-		String[] name1 = new String[2];
-		int x = 0;
-		
-		
-		for (x = 0 ; x < name1.length ; x++) {
-			name1[x] = username.nextLine();
-			String fcapl = name1[x].substring(0,1).toUpperCase() + name1[x].substring(1);
-			//System.out.println(fcapl);
-		}
-		
-		System.out.println("\n");
-		System.out.println("Write random number between 1 to 40!");
-		while (randomcounter.size() < 10) {
-			int number = rnd.nextInt(40) + 1;
-			if (!randomcounter.contains(number)) {
-				randomcounter.add(number);
+		List<String> names = null;
+		int maxCorrect = 0;
+		names = new ArrayList<String>();
+		for (Map.Entry<String, Integer> entry : result.entrySet()) {
+			if (entry.getValue() > maxCorrect) {
+				maxCorrect = entry.getValue();
+				names.clear();
+				names.add(entry.getKey());
+			} else if (entry.getValue() == maxCorrect) {
+				names.add(entry.getKey());
 			}
+			System.out.println(entry.getKey() + " has correct answers = " + entry.getValue());
 		}
+		if (maxCorrect > 0 && null != names && names.size() > 0) {
+			for (int i = 0; i < names.size(); i++) {
+				System.out.println(names.get(i) + " has scored maximum correct answers = " + maxCorrect);
+			}
+		} else {
+			System.out.println("No one won any lottery...");
+		}
+	}
 
-		// First print all random number after generated for cehck for duplications
-		/*
-		 * for (j = 0; j < 6; j++) { System.out.println("Random numbers are: " +
-		 * randomcounter.get(j)); }
-		 */
+	private static Map<String, Integer> getLotteryResult(Integer[] lotteryNumbers, Map<String, Integer[][]> studentData) {
+		Map<String, Integer> result = null;
+		Integer[][] studentGuess = null;
+		int correctGuess = 0;
+		int eachStudentTotalCorrect = 0;
+		result = new ConcurrentHashMap<String, Integer>();
+		for (Map.Entry<String, Integer[][]> entry : studentData.entrySet()) {
+			studentGuess = entry.getValue();
 
-		for (i = 0; i < 10; i++) {
-			usernumber[i] = userinput.nextInt();
-			for (j = 0; j < 10; j++) {
-				if (usernumber[i] == randomcounter.get(j)) {
-					counters++;
+			for (int i = 0; i < eachArraySize; i++) {
+				eachStudentTotalCorrect = 0;
+				correctGuess = 0;
+				for (int j = 0; j < eachArrayGuess; j++) {
+					if (isNumberCorrect(studentGuess[i][j], lotteryNumbers)) {
+						correctGuess++;
+					}
+				}
+				if (correctGuess >= 4) {
+					if (null != result.get(entry.getKey())) {
+						eachStudentTotalCorrect = result.get(entry.getKey());
+						result.put(entry.getKey(), ++eachStudentTotalCorrect);
+					} else {
+						result.put(entry.getKey(), 1);
+					}
 				} else {
+					result.put(entry.getKey(), 0);
 				}
 			}
-			if (usernumber[i] == usernumber[i]) {
+		}
+		return result;
+	}
 
+	private static Map<String, Integer[][]> generateStudentData() {
+		Map<String, Integer[][]> studentData = null;
+		int count = 0;
+		String name = null;
+		Integer[][] numbers = null;
+		Scanner sc = new Scanner(System.in);
+		studentData = new ConcurrentHashMap<String, Integer[][]>();
+		while (count < totalStudents) {
+			System.out.println("Enter student name...");
+			name = sc.next();
+			if (null == studentData.get(name)) {
+				count++;
+				numbers = new Integer[eachArraySize][eachArrayGuess];
+				for (int i = 0; i < eachArraySize; i++) {
+					numbers[i] = getLotteryNumbersFromUser(eachArrayGuess, sc);
+				}
+				studentData.put(name, numbers);
+			} else {
+				System.out.println("Student already exists, re-enter other name");
 			}
 		}
-		if (counters >= 1) {
-			flight++;
-			for (x = 0 ; x < name1.length ; x++) {
-				String fcapl = name1[x].substring(0,1).toUpperCase() + name1[x].substring(1);
-				System.out.println( fcapl + " You won " + flight + " tickets!");
-			}
-			
-		} else {
-			System.out.println("You lost ");
-		}
 
-		System.out.println("\n");
-		for (j = 0; j < 10; j++) {
-			System.out.println("The winning numbers are " + randomcounter.get(j));
+		if (null != sc) {
+			sc.close();
 		}
-		
-		//System.out.println("The winner is: " + name1[0]);
-		return 0;
+		return studentData;
+	}
+
+	private static Integer[] generateLotteryNumbers(int size) {
+		Integer[] lotteryNumbers = new Integer[size];
+		Set<Integer> values = new HashSet<>();
+		int number = 0;
+		for (int i = 0; i < size; i++) {
+			number = generateRandomNumber();
+			while (values.contains(number)) {
+				number = generateRandomNumber();
+			}
+			lotteryNumbers[i] = number;
+		}
+		return lotteryNumbers;
+	}
+
+	private static Integer[] getLotteryNumbersFromUser(int size, Scanner sc) {
+		Integer[] lotteryNumbers = new Integer[size];
+		String arrayData = null;
+		String[] tempData = null;
+		System.out.println("Enter array data: e.g [1,2,3,4,5,6,7]");
+		arrayData = sc.next();
+		arrayData = arrayData.replace("[", "");
+		arrayData = arrayData.replace("]", "");
+		tempData = arrayData.split(",");
+		for (int i = 0; i < 7; i++) {
+			lotteryNumbers[i] = Integer.parseInt(tempData[i]);
+		}
+		return lotteryNumbers;
+	}
+
+	private static int generateRandomNumber() {
+		return new Random().nextInt(41 - 1) + 1;
+	}
+
+	private static boolean isNumberCorrect(Integer number, Integer[] lotteryNumbers) {
+		for (int i = 0; i < lotteryNumbers.length; i++) {
+			if (number == lotteryNumbers[i]) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
