@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class semester {
 
-	public static int totalStudents = 2;
+	public static int totalStudents = 10;
 	public static int eachArraySize = 6;
 	public static int eachArrayGuess = 7;
 
@@ -122,11 +122,13 @@ public class semester {
 		Integer[] lotteryNumbers = new Integer[size];
 		Set<Integer> values = new HashSet<>();
 		int number = 0;
+		System.out.print("Lottery numbers are: ");
 		for (int i = 0; i < size; i++) {
 			number = generateRandomNumber();
 			while (values.contains(number)) {
 				number = generateRandomNumber();
 			}
+			System.out.println( number);
 			lotteryNumbers[i] = number;
 		}
 		return lotteryNumbers;
